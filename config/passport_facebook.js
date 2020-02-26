@@ -21,7 +21,7 @@ const facebookConfig = function(app){
             console.log(profile)
            console.log('passport callback function with Facebook');
            
-           User.findOne({googleID: profile.id}).then((user) =>{
+           User.findOne({facebookID: profile.id}).then((user) =>{
                if(user){
                    done(null,user)
                }else{
